@@ -23,11 +23,23 @@ def unzip_file(zip_filepath, dest_dir):
     with zipfile.ZipFile(zip_filepath, 'r') as zip_ref:
         zip_ref.extractall(dest_dir)
 
+def normalize(file):
+    # normalized the lua data file given by the file path
+    # normalization sorts the tables according to their keys
+    # this allows for easier comparison of the files in git
+    pass
+
 def main():
     # main
     missionPath = os.path.join(getMissionPath(), "tense_syria.miz")
-    destination = os.path.join(getTenseDirectory(), "mission/syria")
-    unzip_file(missionPath, destination)        
+    destination = os.path.join(getTenseDirectory(), "mission", "syria")
+    unzip_file(missionPath, destination)      
+    # normalize the lua files
+    normalize(os.path.join(destination, "mission"))
+    normalize(os.path.join(destination, "options"))
+    normalize(os.path.join(destination, "warehouses"))
+    normalize(os.path.join(destination, "l10n", "DEFAULT", "dictionary"))
+    normalize(os.path.join(destination, "l10n", "DEFAULT", "mapResource"))
 
 if __name__ == "__main__":
     main()  # execute only if run as a script

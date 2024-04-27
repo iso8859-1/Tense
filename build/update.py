@@ -4,6 +4,7 @@ import os
 import zipfile
 import shutil
 from pathlib import Path
+from normalize import normalize
 
 def getDCSPath():
     # get the DCS path
@@ -22,12 +23,6 @@ def getTenseDirectory():
 def unzip_file(zip_filepath, dest_dir):
     with zipfile.ZipFile(zip_filepath, 'r') as zip_ref:
         zip_ref.extractall(dest_dir)
-
-def normalize(file):
-    # normalized the lua data file given by the file path
-    # normalization sorts the tables according to their keys
-    # this allows for easier comparison of the files in git
-    pass
 
 def main():
     # main

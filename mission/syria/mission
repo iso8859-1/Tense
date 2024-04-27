@@ -1,273 +1,58 @@
 mission = 
 {
-    ["requiredModules"] = 
+    ["coalition"] = 
     {
-    }, -- end of ["requiredModules"]
-    ["date"] = 
-    {
-        ["Day"] = 1,
-        ["Year"] = 2020,
-        ["Month"] = 6,
-    }, -- end of ["date"]
-    ["result"] = 
-    {
-        ["offline"] = 
-        {
-            ["conditions"] = 
-            {
-            }, -- end of ["conditions"]
-            ["actions"] = 
-            {
-            }, -- end of ["actions"]
-            ["func"] = 
-            {
-            }, -- end of ["func"]
-        }, -- end of ["offline"]
-        ["total"] = 0,
         ["blue"] = 
         {
-            ["conditions"] = 
+            ["bullseye"] = 
             {
-            }, -- end of ["conditions"]
-            ["actions"] = 
+                ["x"] = 0,
+                ["y"] = 0,
+            }, -- end of "bullseye"
+            ["country"] = 
             {
-            }, -- end of ["actions"]
-            ["func"] = 
+            }, -- end of "country"
+            ["name"] = "blue",
+            ["nav_points"] = 
             {
-            }, -- end of ["func"]
-        }, -- end of ["blue"]
-        ["red"] = 
-        {
-            ["conditions"] = 
-            {
-            }, -- end of ["conditions"]
-            ["actions"] = 
-            {
-            }, -- end of ["actions"]
-            ["func"] = 
-            {
-            }, -- end of ["func"]
-        }, -- end of ["red"]
-    }, -- end of ["result"]
-    ["maxDictId"] = 5,
-    ["trig"] = 
-    {
-        ["actions"] = 
-        {
-        }, -- end of ["actions"]
-        ["events"] = 
-        {
-        }, -- end of ["events"]
-        ["custom"] = 
-        {
-        }, -- end of ["custom"]
-        ["func"] = 
-        {
-        }, -- end of ["func"]
-        ["flag"] = 
-        {
-        }, -- end of ["flag"]
-        ["conditions"] = 
-        {
-        }, -- end of ["conditions"]
-        ["customStartup"] = 
-        {
-        }, -- end of ["customStartup"]
-        ["funcStartup"] = 
-        {
-        }, -- end of ["funcStartup"]
-    }, -- end of ["trig"]
-    ["pictureFileNameN"] = 
-    {
-    }, -- end of ["pictureFileNameN"]
-    ["groundControl"] = 
-    {
-        ["passwords"] = 
-        {
-            ["artillery_commander"] = 
-            {
-            }, -- end of ["artillery_commander"]
-            ["instructor"] = 
-            {
-            }, -- end of ["instructor"]
-            ["observer"] = 
-            {
-            }, -- end of ["observer"]
-            ["forward_observer"] = 
-            {
-            }, -- end of ["forward_observer"]
-        }, -- end of ["passwords"]
-        ["roles"] = 
-        {
-            ["artillery_commander"] = 
-            {
-                ["neutrals"] = 0,
-                ["blue"] = 0,
-                ["red"] = 0,
-            }, -- end of ["artillery_commander"]
-            ["instructor"] = 
-            {
-                ["neutrals"] = 0,
-                ["blue"] = 0,
-                ["red"] = 0,
-            }, -- end of ["instructor"]
-            ["observer"] = 
-            {
-                ["neutrals"] = 0,
-                ["blue"] = 0,
-                ["red"] = 0,
-            }, -- end of ["observer"]
-            ["forward_observer"] = 
-            {
-                ["neutrals"] = 0,
-                ["blue"] = 0,
-                ["red"] = 0,
-            }, -- end of ["forward_observer"]
-        }, -- end of ["roles"]
-        ["isPilotControlVehicles"] = false,
-    }, -- end of ["groundControl"]
-    ["descriptionBlueTask"] = "DictKey_descriptionBlueTask_3",
-    ["weather"] = 
-    {
-        ["wind"] = 
-        {
-            ["at8000"] = 
-            {
-                ["speed"] = 0,
-                ["dir"] = 0,
-            }, -- end of ["at8000"]
-            ["at2000"] = 
-            {
-                ["speed"] = 0,
-                ["dir"] = 0,
-            }, -- end of ["at2000"]
-            ["atGround"] = 
-            {
-                ["speed"] = 0,
-                ["dir"] = 0,
-            }, -- end of ["atGround"]
-        }, -- end of ["wind"]
-        ["enable_fog"] = false,
-        ["season"] = 
-        {
-            ["temperature"] = 20,
-        }, -- end of ["season"]
-        ["qnh"] = 760,
-        ["cyclones"] = 
-        {
-        }, -- end of ["cyclones"]
-        ["dust_density"] = 0,
-        ["enable_dust"] = false,
-        ["clouds"] = 
-        {
-            ["thickness"] = 200,
-            ["density"] = 0,
-            ["preset"] = "Preset2",
-            ["base"] = 2500,
-            ["iprecptns"] = 0,
-        }, -- end of ["clouds"]
-        ["atmosphere_type"] = 0,
-        ["groundTurbulence"] = 0,
-        ["halo"] = 
-        {
-            ["preset"] = "auto",
-        }, -- end of ["halo"]
-        ["type_weather"] = 0,
-        ["modifiedTime"] = false,
-        ["name"] = "Winter, clean sky",
-        ["fog"] = 
-        {
-            ["thickness"] = 0,
-            ["visibility"] = 0,
-        }, -- end of ["fog"]
-        ["visibility"] = 
-        {
-            ["distance"] = 80000,
-        }, -- end of ["visibility"]
-    }, -- end of ["weather"]
-    ["theatre"] = "Syria",
-    ["triggers"] = 
-    {
-        ["zones"] = 
-        {
-        }, -- end of ["zones"]
-    }, -- end of ["triggers"]
-    ["map"] = 
-    {
-        ["centerY"] = -29224.709486286,
-        ["zoom"] = 356367.9078343,
-        ["centerX"] = -206863.7399115,
-    }, -- end of ["map"]
-    ["coalitions"] = 
-    {
+            }, -- end of "nav_points"
+        }, -- end of "blue"
         ["neutrals"] = 
         {
-            [1] = 70,
-            [2] = 83,
-            [3] = 65,
-            [4] = 86,
-            [5] = 64,
-            [6] = 63,
-            [7] = 76,
-            [8] = 84,
-            [9] = 90,
-            [10] = 29,
-            [11] = 62,
-            [12] = 78,
-            [13] = 87,
-            [14] = 61,
-            [15] = 33,
-            [16] = 60,
-            [17] = 17,
-            [18] = 34,
-            [19] = 35,
-            [20] = 69,
-            [21] = 36,
-            [22] = 59,
-            [23] = 37,
-            [24] = 71,
-            [25] = 79,
-            [26] = 58,
-            [27] = 57,
-            [28] = 56,
-            [29] = 55,
-            [30] = 88,
-            [31] = 38,
-            [32] = 73,
-            [33] = 39,
-            [34] = 89,
-            [35] = 54,
-            [36] = 77,
-            [37] = 72,
-            [38] = 42,
-            [39] = 85,
-            [40] = 75,
-            [41] = 45,
-            [42] = 53,
-            [43] = 22,
-            [44] = 52,
-            [45] = 66,
-            [46] = 51,
-            [47] = 74,
-            [48] = 82,
-            [49] = 7,
-            [50] = 68,
-            [51] = 50,
-            [52] = 49,
-            [53] = 48,
-            [54] = 67,
-        }, -- end of ["neutrals"]
+            ["bullseye"] = 
+            {
+                ["x"] = 0,
+                ["y"] = 0,
+            }, -- end of "bullseye"
+            ["country"] = 
+            {
+            }, -- end of "country"
+            ["name"] = "neutrals",
+            ["nav_points"] = 
+            {
+            }, -- end of "nav_points"
+        }, -- end of "neutrals"
+        ["red"] = 
+        {
+            ["bullseye"] = 
+            {
+                ["x"] = 0,
+                ["y"] = 0,
+            }, -- end of "bullseye"
+            ["country"] = 
+            {
+            }, -- end of "country"
+            ["name"] = "red",
+            ["nav_points"] = 
+            {
+            }, -- end of "nav_points"
+        }, -- end of "red"
+    }, -- end of "coalition"
+    ["coalitions"] = 
+    {
         ["blue"] = 
         {
             [1] = 21,
-            [2] = 23,
-            [3] = 11,
-            [4] = 25,
-            [5] = 8,
-            [6] = 80,
-            [7] = 28,
-            [8] = 26,
-            [9] = 13,
             [10] = 30,
             [11] = 5,
             [12] = 16,
@@ -278,6 +63,7 @@ mission =
             [17] = 20,
             [18] = 12,
             [19] = 40,
+            [2] = 23,
             [20] = 41,
             [21] = 44,
             [22] = 9,
@@ -287,7 +73,71 @@ mission =
             [26] = 4,
             [27] = 1,
             [28] = 2,
-        }, -- end of ["blue"]
+            [3] = 11,
+            [4] = 25,
+            [5] = 8,
+            [6] = 80,
+            [7] = 28,
+            [8] = 26,
+            [9] = 13,
+        }, -- end of "blue"
+        ["neutrals"] = 
+        {
+            [1] = 70,
+            [10] = 29,
+            [11] = 62,
+            [12] = 78,
+            [13] = 87,
+            [14] = 61,
+            [15] = 33,
+            [16] = 60,
+            [17] = 17,
+            [18] = 34,
+            [19] = 35,
+            [2] = 83,
+            [20] = 69,
+            [21] = 36,
+            [22] = 59,
+            [23] = 37,
+            [24] = 71,
+            [25] = 79,
+            [26] = 58,
+            [27] = 57,
+            [28] = 56,
+            [29] = 55,
+            [3] = 65,
+            [30] = 88,
+            [31] = 38,
+            [32] = 73,
+            [33] = 39,
+            [34] = 89,
+            [35] = 54,
+            [36] = 77,
+            [37] = 72,
+            [38] = 42,
+            [39] = 85,
+            [4] = 86,
+            [40] = 75,
+            [41] = 45,
+            [42] = 53,
+            [43] = 22,
+            [44] = 52,
+            [45] = 66,
+            [46] = 51,
+            [47] = 74,
+            [48] = 82,
+            [49] = 7,
+            [5] = 64,
+            [50] = 68,
+            [51] = 50,
+            [52] = 49,
+            [53] = 48,
+            [54] = 67,
+            [6] = 63,
+            [7] = 76,
+            [8] = 84,
+            [9] = 90,
+        }, -- end of "neutrals"
         ["red"] = 
         {
             [1] = 18,
@@ -298,79 +148,229 @@ mission =
             [6] = 43,
             [7] = 19,
             [8] = 47,
-        }, -- end of ["red"]
-    }, -- end of ["coalitions"]
-    ["descriptionText"] = "DictKey_descriptionText_1",
-    ["pictureFileNameR"] = 
+        }, -- end of "red"
+    }, -- end of "coalitions"
+    ["currentKey"] = 12,
+    ["date"] = 
     {
-    }, -- end of ["pictureFileNameR"]
-    ["goals"] = 
-    {
-    }, -- end of ["goals"]
+        ["Day"] = 1,
+        ["Month"] = 6,
+        ["Year"] = 2020,
+    }, -- end of "date"
+    ["descriptionBlueTask"] = "DictKey_descriptionBlueTask_3",
     ["descriptionNeutralsTask"] = "DictKey_descriptionNeutralsTask_4",
     ["descriptionRedTask"] = "DictKey_descriptionRedTask_2",
-    ["pictureFileNameB"] = 
-    {
-    }, -- end of ["pictureFileNameB"]
-    ["coalition"] = 
-    {
-        ["neutrals"] = 
-        {
-            ["bullseye"] = 
-            {
-                ["y"] = 0,
-                ["x"] = 0,
-            }, -- end of ["bullseye"]
-            ["nav_points"] = 
-            {
-            }, -- end of ["nav_points"]
-            ["name"] = "neutrals",
-            ["country"] = 
-            {
-            }, -- end of ["country"]
-        }, -- end of ["neutrals"]
-        ["blue"] = 
-        {
-            ["bullseye"] = 
-            {
-                ["y"] = 0,
-                ["x"] = 0,
-            }, -- end of ["bullseye"]
-            ["nav_points"] = 
-            {
-            }, -- end of ["nav_points"]
-            ["name"] = "blue",
-            ["country"] = 
-            {
-            }, -- end of ["country"]
-        }, -- end of ["blue"]
-        ["red"] = 
-        {
-            ["bullseye"] = 
-            {
-                ["y"] = 0,
-                ["x"] = 0,
-            }, -- end of ["bullseye"]
-            ["nav_points"] = 
-            {
-            }, -- end of ["nav_points"]
-            ["name"] = "red",
-            ["country"] = 
-            {
-            }, -- end of ["country"]
-        }, -- end of ["red"]
-    }, -- end of ["coalition"]
-    ["sortie"] = "DictKey_sortie_5",
-    ["version"] = 22,
-    ["trigrules"] = 
-    {
-    }, -- end of ["trigrules"]
-    ["currentKey"] = 12,
+    ["descriptionText"] = "DictKey_descriptionText_1",
     ["failures"] = 
     {
-    }, -- end of ["failures"]
+    }, -- end of "failures"
     ["forcedOptions"] = 
     {
-    }, -- end of ["forcedOptions"]
+    }, -- end of "forcedOptions"
+    ["goals"] = 
+    {
+    }, -- end of "goals"
+    ["groundControl"] = 
+    {
+        ["isPilotControlVehicles"] = false,
+        ["passwords"] = 
+        {
+            ["artillery_commander"] = 
+            {
+            }, -- end of "artillery_commander"
+            ["forward_observer"] = 
+            {
+            }, -- end of "forward_observer"
+            ["instructor"] = 
+            {
+            }, -- end of "instructor"
+            ["observer"] = 
+            {
+            }, -- end of "observer"
+        }, -- end of "passwords"
+        ["roles"] = 
+        {
+            ["artillery_commander"] = 
+            {
+                ["blue"] = 0,
+                ["neutrals"] = 0,
+                ["red"] = 0,
+            }, -- end of "artillery_commander"
+            ["forward_observer"] = 
+            {
+                ["blue"] = 0,
+                ["neutrals"] = 0,
+                ["red"] = 0,
+            }, -- end of "forward_observer"
+            ["instructor"] = 
+            {
+                ["blue"] = 0,
+                ["neutrals"] = 0,
+                ["red"] = 0,
+            }, -- end of "instructor"
+            ["observer"] = 
+            {
+                ["blue"] = 0,
+                ["neutrals"] = 0,
+                ["red"] = 0,
+            }, -- end of "observer"
+        }, -- end of "roles"
+    }, -- end of "groundControl"
+    ["map"] = 
+    {
+        ["centerX"] = -206863.7399115,
+        ["centerY"] = -29224.709486286,
+        ["zoom"] = 356367.9078343,
+    }, -- end of "map"
+    ["maxDictId"] = 5,
+    ["pictureFileNameB"] = 
+    {
+    }, -- end of "pictureFileNameB"
+    ["pictureFileNameN"] = 
+    {
+    }, -- end of "pictureFileNameN"
+    ["pictureFileNameR"] = 
+    {
+    }, -- end of "pictureFileNameR"
+    ["requiredModules"] = 
+    {
+    }, -- end of "requiredModules"
+    ["result"] = 
+    {
+        ["blue"] = 
+        {
+            ["actions"] = 
+            {
+            }, -- end of "actions"
+            ["conditions"] = 
+            {
+            }, -- end of "conditions"
+            ["func"] = 
+            {
+            }, -- end of "func"
+        }, -- end of "blue"
+        ["offline"] = 
+        {
+            ["actions"] = 
+            {
+            }, -- end of "actions"
+            ["conditions"] = 
+            {
+            }, -- end of "conditions"
+            ["func"] = 
+            {
+            }, -- end of "func"
+        }, -- end of "offline"
+        ["red"] = 
+        {
+            ["actions"] = 
+            {
+            }, -- end of "actions"
+            ["conditions"] = 
+            {
+            }, -- end of "conditions"
+            ["func"] = 
+            {
+            }, -- end of "func"
+        }, -- end of "red"
+        ["total"] = 0,
+    }, -- end of "result"
+    ["sortie"] = "DictKey_sortie_5",
     ["start_time"] = 28800,
+    ["theatre"] = "Syria",
+    ["trig"] = 
+    {
+        ["actions"] = 
+        {
+        }, -- end of "actions"
+        ["conditions"] = 
+        {
+        }, -- end of "conditions"
+        ["custom"] = 
+        {
+        }, -- end of "custom"
+        ["customStartup"] = 
+        {
+        }, -- end of "customStartup"
+        ["events"] = 
+        {
+        }, -- end of "events"
+        ["flag"] = 
+        {
+        }, -- end of "flag"
+        ["func"] = 
+        {
+        }, -- end of "func"
+        ["funcStartup"] = 
+        {
+        }, -- end of "funcStartup"
+    }, -- end of "trig"
+    ["triggers"] = 
+    {
+        ["zones"] = 
+        {
+        }, -- end of "zones"
+    }, -- end of "triggers"
+    ["trigrules"] = 
+    {
+    }, -- end of "trigrules"
+    ["version"] = 22,
+    ["weather"] = 
+    {
+        ["atmosphere_type"] = 0,
+        ["clouds"] = 
+        {
+            ["base"] = 2500,
+            ["density"] = 0,
+            ["iprecptns"] = 0,
+            ["preset"] = "Preset2",
+            ["thickness"] = 200,
+        }, -- end of "clouds"
+        ["cyclones"] = 
+        {
+        }, -- end of "cyclones"
+        ["dust_density"] = 0,
+        ["enable_dust"] = false,
+        ["enable_fog"] = false,
+        ["fog"] = 
+        {
+            ["thickness"] = 0,
+            ["visibility"] = 0,
+        }, -- end of "fog"
+        ["groundTurbulence"] = 0,
+        ["halo"] = 
+        {
+            ["preset"] = "auto",
+        }, -- end of "halo"
+        ["modifiedTime"] = false,
+        ["name"] = "Winter, clean sky",
+        ["qnh"] = 760,
+        ["season"] = 
+        {
+            ["temperature"] = 20,
+        }, -- end of "season"
+        ["type_weather"] = 0,
+        ["visibility"] = 
+        {
+            ["distance"] = 80000,
+        }, -- end of "visibility"
+        ["wind"] = 
+        {
+            ["at2000"] = 
+            {
+                ["dir"] = 0,
+                ["speed"] = 0,
+            }, -- end of "at2000"
+            ["at8000"] = 
+            {
+                ["dir"] = 0,
+                ["speed"] = 0,
+            }, -- end of "at8000"
+            ["atGround"] = 
+            {
+                ["dir"] = 0,
+                ["speed"] = 0,
+            }, -- end of "atGround"
+        }, -- end of "wind"
+    }, -- end of "weather"
 } -- end of mission

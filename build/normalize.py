@@ -25,10 +25,70 @@ class LuaTableParser(lrparsing.Grammar):
     START = T.name + '=' + table_constructor
     COMMENTS = T.line_comment | T.block_comment
 
-def main(filename):
+# parse_tree consists of tuples.
+# each tuple:
+#   - 0: the rule
+#   - 1+: matched elements
+
+class LuaTable:
+    def __init__(self, parse_tree):
+        self.name = parse_tree[1][1]     
+        self.table = self.get_dict_from_table_constructor(parse_tree[3]) 
+    
+    def get_dict_from_table_constructor(self, table_constructor):
+        assert table_constructor[0].name == "table_constructor"
+        table = {}
+        for x in range(2, len(table_constructor)):
+            field = table_constructor[x]
+            if field[0].name == "field":
+                self.add_field(table, field)    
+        return table
+
+    def add_field(self, dict, field_node):
+        assert field_node[0].name == "field"
+        key = field_node[2][1][1]
+        if field_node[5][0].name == "table_constructor":
+            value = self.get_dict_from_table_constructor(field_node[5])
+        else:
+            value = field_node[5][1][1]
+        dict[key] = value
+
+    def serialize_dict(self, table, indent):
+        if indent == 0:
+            indentation = ''
+        else:
+            indentation = ' '.ljust(indent)
+        inner_indentation = ' '.ljust(indent+4)
+        result = f"{indentation}{{\n"
+        for key, value in sorted(table.items()):
+            if isinstance(value, dict):
+                result += f"{inner_indentation}[{key}] = \n{self.serialize_dict(value, indent+4)}, -- end of {key}\n"
+            else:
+                result += f"{inner_indentation}[{key}] = {value},\n"
+        result += f"{indentation}}}"
+        return result
+
+    def serialize(self):
+        result = f"{self.name} = \n{self.serialize_dict(self.table, 0)} -- end of {self.name}\n"
+        return result
+    
+def replace_file_content(file_path, new_content):
+    with open(file_path, 'w') as file:
+        file.write(new_content)
+    
+def normalize_str(filename):
     content = load_file_into_string(filename)
     parse_tree = LuaTableParser.parse(content)
-    print(LuaTableParser.repr_parse_tree(parse_tree))
+    table = LuaTable(parse_tree)
+    return table.serialize()
+
+def normalize(filename):
+    normalized = normalize_str(filename)
+    replace_file_content(filename, normalized)
+
+def main(filename):
+    normalized = normalize_str(filename)
+    print(normalized)
 
 def load_file_into_string(file_path):
     with open(file_path, 'r') as file:

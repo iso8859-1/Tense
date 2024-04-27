@@ -150,7 +150,7 @@ mission =
             [8] = 47,
         }, -- end of "red"
     }, -- end of "coalitions"
-    ["currentKey"] = 12,
+    ["currentKey"] = 28,
     ["date"] = 
     {
         ["Day"] = 1,
@@ -222,7 +222,7 @@ mission =
         ["centerY"] = -29224.709486286,
         ["zoom"] = 356367.9078343,
     }, -- end of "map"
-    ["maxDictId"] = 5,
+    ["maxDictId"] = 6,
     ["pictureFileNameB"] = 
     {
     }, -- end of "pictureFileNameB"
@@ -282,9 +282,11 @@ mission =
     {
         ["actions"] = 
         {
+            [1] = "a_do_script_file(getValueResourceByKey(\"ResKey_Action_6\"));",
         }, -- end of "actions"
         ["conditions"] = 
         {
+            [1] = "return(true)",
         }, -- end of "conditions"
         ["custom"] = 
         {
@@ -297,12 +299,14 @@ mission =
         }, -- end of "events"
         ["flag"] = 
         {
+            [1] = true,
         }, -- end of "flag"
         ["func"] = 
         {
         }, -- end of "func"
         ["funcStartup"] = 
         {
+            [1] = "if mission.trig.conditions[1]() then mission.trig.actions[1]() end",
         }, -- end of "funcStartup"
     }, -- end of "trig"
     ["triggers"] = 
@@ -313,6 +317,24 @@ mission =
     }, -- end of "triggers"
     ["trigrules"] = 
     {
+        [1] = 
+        {
+            ["actions"] = 
+            {
+                [1] = 
+                {
+                    ["file"] = "ResKey_Action_6",
+                    ["predicate"] = "a_do_script_file",
+                }, -- end of 1
+            }, -- end of "actions"
+            ["colorItem"] = "0x00ff00ff",
+            ["comment"] = "Load MOOSE",
+            ["eventlist"] = "",
+            ["predicate"] = "triggerStart",
+            ["rules"] = 
+            {
+            }, -- end of "rules"
+        }, -- end of 1
     }, -- end of "trigrules"
     ["version"] = 22,
     ["weather"] = 

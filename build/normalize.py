@@ -1,5 +1,7 @@
 import argparse
+import os
 import lrparsing
+from build_utils import getDCSPath, getRepoDirectory, replace_file_content, load_file_into_string
 from lrparsing import Keyword, List, Prio, Ref, THIS, Token, Tokens
 
 class LuaTableParser(lrparsing.Grammar):
@@ -71,16 +73,25 @@ class LuaTable:
     def serialize(self):
         result = f"{self.name} = \n{self.serialize_dict(self.table, 0)} -- end of {self.name}\n"
         return result
-    
-def replace_file_content(file_path, new_content):
-    with open(file_path, 'w') as file:
-        file.write(new_content)
-    
-def normalize_str(filename):
+
+def normalize_table(filename):
     content = load_file_into_string(filename)
     parse_tree = LuaTableParser.parse(content)
     table = LuaTable(parse_tree)
     return table.serialize()
+    
+def normalize_str(filename):
+    table = normalize_table(filename)
+    normalized = replace_script_file_locations(table)
+    return normalized
+
+def replace_script_file_locations(content):
+    scripts_dir = os.path.join(getRepoDirectory(), "scripts")
+    scripts_dir = scripts_dir.replace("\\", "\\\\\\\\")
+    content = content.replace(scripts_dir, "{git_repo_scripts_location_text}")
+    scripts_dir = scripts_dir.replace("\\", "\\\\")
+    content = content.replace(scripts_dir, "{git_repo_scripts_location}")
+    return content
 
 def normalize(filename):
     normalized = normalize_str(filename)
@@ -89,11 +100,6 @@ def normalize(filename):
 def main(filename):
     normalized = normalize_str(filename)
     print(normalized)
-
-def load_file_into_string(file_path):
-    with open(file_path, 'r') as file:
-        data = file.read()
-    return data
 
 if __name__ == "__main__":
     #parser = argparse.ArgumentParser()

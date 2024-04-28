@@ -31,6 +31,15 @@ def rename_file(old_name, new_name):
     else:
         print(f"The file {old_name} does not exist")
 
+def load_file_into_string(file_path):
+    with open(file_path, 'r') as file:
+        data = file.read()
+    return data
+
+def replace_file_content(file_path, new_content):
+    with open(file_path, 'w') as file:
+        file.write(new_content)
+
 def zip_mission(mission_dir, destination_filename):
     remove_file_if_exists(destination_filename)
     remove_file_if_exists(destination_filename + ".zip")

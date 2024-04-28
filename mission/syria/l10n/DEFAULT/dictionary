@@ -1,5 +1,6 @@
 dictionary = 
 {
+    ["DictKey_ActionText_7"] = "Hello Mission Editor",
     ["DictKey_descriptionBlueTask_3"] = "",
     ["DictKey_descriptionNeutralsTask_4"] = "",
     ["DictKey_descriptionRedTask_2"] = "",

@@ -3,6 +3,27 @@ import zipfile
 import shutil
 from pathlib import Path
 
+def get_directories(path):
+    return [entry.name for entry in os.scandir(path) if entry.is_dir()]
+
+def is_directory_empty(dir_path):
+    with os.scandir(dir_path) as it:
+        return not any(True for _ in it)
+
+def getSupportedTheaterList():
+    git_mission_dir = os.path.join(getRepoDirectory(), "mission")
+    if is_directory_empty(git_mission_dir) or os.path.exists(os.path.join(git_mission_dir, "mission")) == True:
+        return []
+    else:
+        return get_directories(git_mission_dir)
+
+def getMissionName():
+    git_dir = os.path.basename(getRepoDirectory())
+    if len(getSupportedTheaterList()) == 0:
+        return [f"{git_dir}.miz"]
+    else: 
+        return [f"{git_dir}_{item}.miz" for item in getSupportedTheaterList()]
+
 def getDCSPath():
     # get the DCS path
     return os.path.join(os.path.expanduser("~"), "Saved Games", "DCS")

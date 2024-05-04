@@ -18,10 +18,11 @@ function load_init_scripts()
     MESSAGE:New("Loading init scripts from " .. path, 10):ToAll()
     for file in lfs.dir(path) do
         if file ~= "." and file ~= ".." then
-            local f = path..'/'..file
+            local f = path..'\\'..file
             if lfs.attributes(f, "mode") == "file" and f:match("%.lua$") then
                 env.info("Loading script: " .. f)
                 MESSAGE:New("Loading script: " .. f, 10):ToAll()
+                assert(loadfile(f))()
             end
         end
     end

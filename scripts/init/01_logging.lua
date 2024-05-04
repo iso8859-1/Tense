@@ -52,14 +52,14 @@ function Logger:setBroadcast(broadcast)
     self.broadcast = broadcast
 end
 
-function test()
+local function test()
     Logger:error("This is an error message")
     Logger:warn("This is a warning message")
     Logger:info("This is an info message")
     Logger:debug("This is a debug message")
 end
 
-function init_logging_radio(menu)
+local function init_logging_radio(menu)
     local MenuEnableBroadcast = MENU_MISSION_COMMAND:New("Enable Broadcast", menu, function() Logger:setBroadcast(true) end)
     local MenuDisableBroadcast = MENU_MISSION_COMMAND:New("Disable Broadcast", menu, function() Logger:setBroadcast(false) end)
     local MenuLogLevelError = MENU_MISSION_COMMAND:New("Log Level Error", menu, function() Logger:setLogLevel(LogLevels.ERROR) end)
@@ -69,8 +69,8 @@ function init_logging_radio(menu)
     local MenuTestLogging = MENU_MISSION_COMMAND:New("Test Logging", menu, function() test() end)
 end
 
-logger_menu = MENU_MISSION:New("Logger")
-init_logging_radio(logger_menu)
+Logger_menu = MENU_MISSION:New("Logger")
+init_logging_radio(Logger_menu)
 
 Logger:info("Logger initialized")
 -- Test Code

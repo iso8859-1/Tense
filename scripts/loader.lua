@@ -1,18 +1,18 @@
 -- loads all script files in the init folder
 
-function get_directory_from_path(path)
+local function get_directory_from_path(path)
     return path:match("(.*[/\\])")
 end
 
 -- finds the path of the loader.lua file
 -- as this may change for different developer PCs
-function get_script_path()
+local function get_script_path()
     local str = debug.getinfo(get_script_path).source
     return get_directory_from_path(str)
 end
 
 -- loads all scripts in the init sub-folder
-function load_init_scripts()
+local function load_init_scripts()
     local path = get_script_path() .. "init"
     env.info("Loading init scripts fom: " .. path)
     MESSAGE:New("Loading init scripts from " .. path, 10):ToAll()

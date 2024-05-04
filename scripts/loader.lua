@@ -30,7 +30,7 @@ end
 
 -- check if the lfs module is available aka the mission is running in a sanitized environment or not.
 if lfs == nil then
-    env.warn("Mission running in sanatized environment.")
+    env.warning("Mission running in sanatized environment.")
     MESSAGE:New("Mission running in sanatized environment. Not all features available", 10):ToAll()
     MESSAGE:New("To de-sanatize it, edit MissionScriptiong.lua", 10):ToAll()
     return

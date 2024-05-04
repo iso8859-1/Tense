@@ -35,3 +35,16 @@ To be able to edit a `lua` script file while testing the scripts in DCS without 
 loader.lua will run once after `Moose` has been initialized. It's purpose is to run all lua scripts that are required to initialize the mission. For that, it will grab all `.lua` files in the init subfolder and load them in alphabetical order. There is no need to add a trigger / assert for files in that folder.
 
 For loader.lua to work, it needs file access. To enable this, find `MissionScripting.lua` and comment out / remove `sanitizeModule('lfs')` (e.g. by replacing it with `-- sanitizeModule('lfs')`).
+
+### Logging
+
+`01_logging.lua` provides basic logging facilities. How to use:
+
+```lua
+    Logger:error("This is an error message")
+    Logger:warn("This is a warning message")
+    Logger:info("This is an info message")
+    Logger:debug("This is a debug message")
+```
+
+The logger filters according to the log-level set in the logger. The default is `LogLevels.ERROR` i.e., only error messages are shown. The default is also logging into `dcs.log` only, but the log messages can also be broadcasted to everyone if required. All settings can be changed in the `F10` radio menu under `Logger`.

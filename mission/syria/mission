@@ -581,7 +581,7 @@ mission =
             [8] = 47,
         }, -- end of "red"
     }, -- end of "coalitions"
-    ["currentKey"] = 149,
+    ["currentKey"] = 170,
     ["date"] = 
     {
         ["Day"] = 1,
@@ -649,9 +649,9 @@ mission =
     }, -- end of "groundControl"
     ["map"] = 
     {
-        ["centerX"] = -242598.22530954,
-        ["centerY"] = -87275.549108009,
-        ["zoom"] = 3034.0410219549,
+        ["centerX"] = -242641.7668687,
+        ["centerY"] = -87022.24630229,
+        ["zoom"] = 4693.8115855115,
     }, -- end of "map"
     ["maxDictId"] = 7,
     ["pictureFileNameB"] = 
@@ -714,7 +714,7 @@ mission =
         ["actions"] = 
         {
             [1] = "a_do_script_file(getValueResourceByKey(\"ResKey_Action_6\"));",
-            [2] = "a_do_script(\"assert(loadfile(\\\"{git_repo_scripts_location}\\\\\\\\syria.lua\\\"))()\"); mission.trig.func[2]=nil;",
+            [2] = "a_do_script(\"assert(loadfile(\\\"{git_repo_scripts_location}\\\\\\\\loader.lua\\\"))()\"); mission.trig.func[2]=nil;",
         }, -- end of "actions"
         ["conditions"] = 
         {
@@ -777,7 +777,7 @@ mission =
                 [1] = 
                 {
                     ["predicate"] = "a_do_script",
-                    ["text"] = "assert(loadfile(\"{git_repo_scripts_location_text}\\\\syria.lua\"))()",
+                    ["text"] = "assert(loadfile(\"{git_repo_scripts_location_text}\\\\loader.lua\"))()",
                 }, -- end of 1
             }, -- end of "actions"
             ["comment"] = "Initialize World",

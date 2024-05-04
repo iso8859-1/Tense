@@ -29,3 +29,9 @@ To be able to edit a `lua` script file while testing the scripts in DCS without 
     - replace `<path to your repo>` with the actual path to your repo e.g. `D:\DCS\Missions\Tense` and `<your script>.lua` with the name of your script e.g., `syria.lua`
 
 `update.py` will replace this path with an internal constant when copying the files into the git repo. `build.py` will replace it back to the git repo location (in DEV mode). This ensures that multiple people can work together even if their git repositories are at different absolute paths on disc.
+
+### loader.lua
+
+loader.lua will run once after `Moose` has been initialized. It's purpose is to run all lua scripts that are required to initialize the mission. For that, it will grab all `.lua` files in the init subfolder and load them in alphabetical order. There is no need to add a trigger / assert for files in that folder.
+
+For loader.lua to work, it needs file access. To enable this, find `MissionScripting.lua` and comment out / remove `sanitizeModule('lfs')` (e.g. by replacing it with `-- sanitizeModule('lfs')`).

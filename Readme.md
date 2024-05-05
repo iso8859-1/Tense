@@ -25,7 +25,7 @@ To be able to edit a `lua` script file while testing the scripts in DCS without 
 - create a trigger condition
 - as action, you choose `do_script` (not `do_script_file`)
 - place your lua script into the `scripts` folder of the git repo
-- you need to enter the following into `Text`: `assert(loadfile("<path to your repo>\scripts\<your script>.lua"))()`
+- you need to enter the following into `Text`: `assert(loadfile("<path to your repo>\\scripts\\<your script>.lua"))()`
     - replace `<path to your repo>` with the actual path to your repo e.g. `D:\DCS\Missions\Tense` and `<your script>.lua` with the name of your script e.g., `syria.lua`
 
 `update.py` will replace this path with an internal constant when copying the files into the git repo. `build.py` will replace it back to the git repo location (in DEV mode). This ensures that multiple people can work together even if their git repositories are at different absolute paths on disc.

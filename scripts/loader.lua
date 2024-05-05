@@ -6,14 +6,14 @@ end
 
 -- finds the path of the loader.lua file
 -- as this may change for different developer PCs
-local function get_script_path()
-    local str = debug.getinfo(get_script_path).source
+function GetScriptPath()
+    local str = debug.getinfo(GetScriptPath).source
     return get_directory_from_path(str)
 end
 
 -- loads all scripts in the init sub-folder
 local function load_init_scripts()
-    local path = get_script_path() .. "init"
+    local path = GetScriptPath() .. "init"
     env.info("Loading init scripts fom: " .. path)
     MESSAGE:New("Loading init scripts from " .. path, 10):ToAll()
     for file in lfs.dir(path) do

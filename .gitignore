@@ -1,3 +1,4 @@
 *.pyc
 temp/
 scripts/Moose.lua
+options

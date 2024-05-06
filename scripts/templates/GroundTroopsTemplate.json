@@ -1,0 +1,61 @@
+{
+    "UnitLeopard2": {
+        "modulation": 0,
+        "tasks": {},
+        "task": "Reconnaissance",
+        "uncontrolled": false,
+        "route": {
+            "points": [
+                {
+                    "alt": 6,
+                    "action": "Turning Point",
+                    "alt_type": "BARO",
+                    "speed": 10,
+                    "task": {
+                        "id": "ComboTask",
+                        "params": {
+                            "tasks": {}
+                        }
+                    },
+                    "type": "Turning Point",
+                    "ETA": 0,
+                    "ETA_locked": true,
+                    "y": -87631,
+                    "x": -242455,
+                    "formation_template": "",
+                    "speed_locked": true
+                }
+            ]
+        },
+        "groupId": 1,
+        "hidden": false,
+        "units": [
+            {
+                "alt": 6,
+                "alt_type": "BARO",
+                "skill": "High",
+                "speed": 10,
+                "type": "Leopard-2",
+                "unitId": 1,
+                "psi": 0,
+                "y": -87631,
+                "x": -242455,
+                "name": "P51-1-1",
+                "payload": {
+                    "pylons": {},
+                    "fuel": 340.68,
+                    "flare": 0,
+                    "chaff": 0,
+                    "gun": 100
+                },
+                "heading": 0
+            }
+        ],
+        "y": -87631,
+        "x": -242455,
+        "name": "Leopard-2",
+        "communication": true,
+        "start_time": 0,
+        "frequency": 124
+    }
+}

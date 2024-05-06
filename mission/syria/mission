@@ -11,437 +11,6 @@ mission =
             }, -- end of "bullseye"
             ["country"] = 
             {
-                [1] = 
-                {
-                    ["id"] = 2,
-                    ["name"] = "USA",
-                    ["plane"] = 
-                    {
-                        ["group"] = 
-                        {
-                            [1] = 
-                            {
-                                ["communication"] = true,
-                                ["frequency"] = 251,
-                                ["groupId"] = 1,
-                                ["hidden"] = false,
-                                ["modulation"] = 0,
-                                ["name"] = "Aerial-1",
-                                ["radioSet"] = false,
-                                ["route"] = 
-                                {
-                                    ["points"] = 
-                                    {
-                                        [1] = 
-                                        {
-                                            ["ETA"] = 0,
-                                            ["ETA_locked"] = true,
-                                            ["action"] = "From Parking Area",
-                                            ["airdromeId"] = 13,
-                                            ["alt"] = 6,
-                                            ["alt_type"] = "BARO",
-                                            ["formation_template"] = "",
-                                            ["properties"] = 
-                                            {
-                                                ["angle"] = 0,
-                                                ["scale"] = 0,
-                                                ["steer"] = 2,
-                                                ["vangle"] = 0,
-                                                ["vnav"] = 1,
-                                            }, -- end of "properties"
-                                            ["speed"] = 138.88888888889,
-                                            ["speed_locked"] = true,
-                                            ["task"] = 
-                                            {
-                                                ["id"] = "ComboTask",
-                                                ["params"] = 
-                                                {
-                                                    ["tasks"] = 
-                                                    {
-                                                        [1] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "EngageTargets",
-                                                            ["key"] = "CAS",
-                                                            ["number"] = 1,
-                                                            ["params"] = 
-                                                            {
-                                                                ["priority"] = 0,
-                                                                ["targetTypes"] = 
-                                                                {
-                                                                    [1] = "Helicopters",
-                                                                    [2] = "Ground Units",
-                                                                    [3] = "Light armed ships",
-                                                                }, -- end of "targetTypes"
-                                                            }, -- end of "params"
-                                                        }, -- end of 1
-                                                        [2] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 2,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "Option",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["name"] = 1,
-                                                                        ["value"] = 2,
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 2
-                                                        [3] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 3,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "Option",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["name"] = 3,
-                                                                        ["value"] = 1,
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 3
-                                                        [4] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 4,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "Option",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["formationIndex"] = 2,
-                                                                        ["name"] = 5,
-                                                                        ["value"] = 131074,
-                                                                        ["variantIndex"] = 2,
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 4
-                                                        [5] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 5,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "Option",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["name"] = 15,
-                                                                        ["value"] = true,
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 5
-                                                        [6] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 6,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "Option",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["name"] = 21,
-                                                                        ["noTargetTypes"] = 
-                                                                        {
-                                                                            [1] = "Fighters",
-                                                                            [10] = "APC",
-                                                                            [11] = "Artillery",
-                                                                            [12] = "Unarmed vehicles",
-                                                                            [13] = "AAA",
-                                                                            [14] = "SR SAM",
-                                                                            [15] = "MR SAM",
-                                                                            [16] = "LR SAM",
-                                                                            [17] = "Aircraft Carriers",
-                                                                            [18] = "Cruisers",
-                                                                            [19] = "Destroyers",
-                                                                            [2] = "Multirole fighters",
-                                                                            [20] = "Frigates",
-                                                                            [21] = "Corvettes",
-                                                                            [22] = "Light armed ships",
-                                                                            [23] = "Unarmed ships",
-                                                                            [24] = "Submarines",
-                                                                            [25] = "Cruise missiles",
-                                                                            [26] = "Antiship Missiles",
-                                                                            [27] = "AA Missiles",
-                                                                            [28] = "AG Missiles",
-                                                                            [29] = "SA Missiles",
-                                                                            [3] = "Bombers",
-                                                                            [4] = "Helicopters",
-                                                                            [5] = "UAVs",
-                                                                            [6] = "Infantry",
-                                                                            [7] = "Fortifications",
-                                                                            [8] = "Tanks",
-                                                                            [9] = "IFV",
-                                                                        }, -- end of "noTargetTypes"
-                                                                        ["targetTypes"] = 
-                                                                        {
-                                                                        }, -- end of "targetTypes"
-                                                                        ["value"] = "none;",
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 6
-                                                        [7] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 7,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "Option",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["name"] = 19,
-                                                                        ["value"] = true,
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 7
-                                                        [8] = 
-                                                        {
-                                                            ["auto"] = true,
-                                                            ["enabled"] = true,
-                                                            ["id"] = "WrappedAction",
-                                                            ["number"] = 8,
-                                                            ["params"] = 
-                                                            {
-                                                                ["action"] = 
-                                                                {
-                                                                    ["id"] = "EPLRS",
-                                                                    ["params"] = 
-                                                                    {
-                                                                        ["groupId"] = 1,
-                                                                        ["value"] = true,
-                                                                    }, -- end of "params"
-                                                                }, -- end of "action"
-                                                            }, -- end of "params"
-                                                        }, -- end of 8
-                                                    }, -- end of "tasks"
-                                                }, -- end of "params"
-                                            }, -- end of "task"
-                                            ["type"] = "TakeOffParking",
-                                            ["x"] = -242438.140625,
-                                            ["y"] = -87631.1640625,
-                                        }, -- end of 1
-                                    }, -- end of "points"
-                                }, -- end of "route"
-                                ["start_time"] = 0,
-                                ["task"] = "CAS",
-                                ["tasks"] = 
-                                {
-                                }, -- end of "tasks"
-                                ["uncontrollable"] = false,
-                                ["uncontrolled"] = false,
-                                ["units"] = 
-                                {
-                                    [1] = 
-                                    {
-                                        ["AddPropAircraft"] = 
-                                        {
-                                            ["SADL_TN"] = "0101",
-                                            ["VoiceCallsignLabel"] = "ED",
-                                            ["VoiceCallsignNumber"] = "11",
-                                        }, -- end of "AddPropAircraft"
-                                        ["Radio"] = 
-                                        {
-                                            [1] = 
-                                            {
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 251,
-                                                    [10] = 262,
-                                                    [11] = 259,
-                                                    [12] = 268,
-                                                    [13] = 269,
-                                                    [14] = 260,
-                                                    [15] = 263,
-                                                    [16] = 261,
-                                                    [17] = 267,
-                                                    [18] = 251,
-                                                    [19] = 253,
-                                                    [2] = 264,
-                                                    [20] = 266,
-                                                    [21] = 54,
-                                                    [22] = 32.5,
-                                                    [23] = 42,
-                                                    [24] = 37.5,
-                                                    [25] = 54,
-                                                    [3] = 265,
-                                                    [4] = 256,
-                                                    [5] = 254,
-                                                    [6] = 250,
-                                                    [7] = 270,
-                                                    [8] = 257,
-                                                    [9] = 255,
-                                                }, -- end of "channels"
-                                                ["channelsNames"] = 
-                                                {
-                                                }, -- end of "channelsNames"
-                                                ["modulations"] = 
-                                                {
-                                                }, -- end of "modulations"
-                                            }, -- end of 1
-                                            [2] = 
-                                            {
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 305,
-                                                    [10] = 262,
-                                                    [11] = 259,
-                                                    [12] = 268,
-                                                    [13] = 269,
-                                                    [14] = 260,
-                                                    [15] = 263,
-                                                    [16] = 261,
-                                                    [17] = 267,
-                                                    [18] = 251,
-                                                    [19] = 253,
-                                                    [2] = 264,
-                                                    [20] = 266,
-                                                    [3] = 265,
-                                                    [4] = 256,
-                                                    [5] = 254,
-                                                    [6] = 250,
-                                                    [7] = 270,
-                                                    [8] = 257,
-                                                    [9] = 255,
-                                                }, -- end of "channels"
-                                                ["channelsNames"] = 
-                                                {
-                                                }, -- end of "channelsNames"
-                                                ["modulations"] = 
-                                                {
-                                                }, -- end of "modulations"
-                                            }, -- end of 2
-                                            [3] = 
-                                            {
-                                                ["channels"] = 
-                                                {
-                                                    [1] = 31.5,
-                                                    [10] = 39.9,
-                                                    [11] = 41.5,
-                                                    [12] = 75.7,
-                                                    [13] = 33,
-                                                    [14] = 38,
-                                                    [15] = 42,
-                                                    [16] = 51.5,
-                                                    [17] = 50,
-                                                    [18] = 79,
-                                                    [19] = 51.5,
-                                                    [2] = 45.7,
-                                                    [20] = 34.9,
-                                                    [3] = 57,
-                                                    [4] = 38,
-                                                    [5] = 30,
-                                                    [6] = 32,
-                                                    [7] = 40,
-                                                    [8] = 50,
-                                                    [9] = 55.5,
-                                                }, -- end of "channels"
-                                                ["channelsNames"] = 
-                                                {
-                                                }, -- end of "channelsNames"
-                                                ["modulations"] = 
-                                                {
-                                                }, -- end of "modulations"
-                                            }, -- end of 3
-                                        }, -- end of "Radio"
-                                        ["alt"] = 6,
-                                        ["alt_type"] = "BARO",
-                                        ["callsign"] = 
-                                        {
-                                            ["name"] = "Enfield11",
-                                            [1] = 1,
-                                            [2] = 1,
-                                            [3] = 1,
-                                        }, -- end of "callsign"
-                                        ["datalinks"] = 
-                                        {
-                                            ["SADL"] = 
-                                            {
-                                                ["network"] = 
-                                                {
-                                                    ["donors"] = 
-                                                    {
-                                                    }, -- end of "donors"
-                                                    ["teamMembers"] = 
-                                                    {
-                                                        [1] = 
-                                                        {
-                                                            ["missionUnitId"] = 1,
-                                                        }, -- end of 1
-                                                    }, -- end of "teamMembers"
-                                                }, -- end of "network"
-                                                ["settings"] = 
-                                                {
-                                                    ["AirKey"] = 10,
-                                                    ["GatewayKey"] = 8,
-                                                    ["flightLead"] = true,
-                                                }, -- end of "settings"
-                                            }, -- end of "SADL"
-                                        }, -- end of "datalinks"
-                                        ["heading"] = 0,
-                                        ["livery_id"] = "104th fs maryland ang, baltimore (md)",
-                                        ["name"] = "Aerial-1-1",
-                                        ["onboard_num"] = "010",
-                                        ["parking"] = "10",
-                                        ["parking_id"] = "Z1",
-                                        ["payload"] = 
-                                        {
-                                            ["ammo_type"] = 1,
-                                            ["chaff"] = 240,
-                                            ["flare"] = 240,
-                                            ["fuel"] = 5029,
-                                            ["gun"] = 100,
-                                            ["pylons"] = 
-                                            {
-                                            }, -- end of "pylons"
-                                        }, -- end of "payload"
-                                        ["psi"] = 0,
-                                        ["skill"] = "Client",
-                                        ["speed"] = 138.88888888889,
-                                        ["type"] = "A-10C_2",
-                                        ["unitId"] = 1,
-                                        ["x"] = -242438.140625,
-                                        ["y"] = -87631.1640625,
-                                    }, -- end of 1
-                                }, -- end of "units"
-                                ["x"] = -242438.140625,
-                                ["y"] = -87631.1640625,
-                            }, -- end of 1
-                        }, -- end of "group"
-                    }, -- end of "plane"
-                }, -- end of 1
             }, -- end of "country"
             ["name"] = "blue",
             ["nav_points"] = 
@@ -484,104 +53,104 @@ mission =
         ["blue"] = 
         {
             [1] = 21,
-            [10] = 30,
-            [11] = 5,
-            [12] = 16,
-            [13] = 6,
-            [14] = 31,
-            [15] = 32,
-            [16] = 15,
-            [17] = 20,
-            [18] = 12,
-            [19] = 40,
-            [2] = 23,
-            [20] = 41,
+            [10] = 16,
+            [11] = 31,
+            [12] = 15,
+            [13] = 20,
+            [14] = 8,
+            [15] = 28,
+            [16] = 10,
+            [17] = 12,
+            [18] = 40,
+            [19] = 41,
+            [2] = 11,
+            [20] = 46,
             [21] = 44,
             [22] = 9,
-            [23] = 46,
-            [24] = 10,
-            [25] = 3,
-            [26] = 4,
-            [27] = 1,
-            [28] = 2,
-            [3] = 11,
-            [4] = 25,
-            [5] = 8,
-            [6] = 80,
-            [7] = 28,
-            [8] = 26,
-            [9] = 13,
+            [23] = 26,
+            [24] = 3,
+            [25] = 1,
+            [26] = 32,
+            [27] = 2,
+            [28] = 23,
+            [3] = 25,
+            [4] = 80,
+            [5] = 6,
+            [6] = 13,
+            [7] = 30,
+            [8] = 5,
+            [9] = 4,
         }, -- end of "blue"
         ["neutrals"] = 
         {
             [1] = 70,
-            [10] = 29,
-            [11] = 62,
-            [12] = 78,
-            [13] = 87,
-            [14] = 61,
-            [15] = 33,
-            [16] = 60,
-            [17] = 17,
-            [18] = 34,
-            [19] = 35,
+            [10] = 66,
+            [11] = 90,
+            [12] = 87,
+            [13] = 61,
+            [14] = 33,
+            [15] = 60,
+            [16] = 35,
+            [17] = 34,
+            [18] = 69,
+            [19] = 36,
             [2] = 83,
-            [20] = 69,
-            [21] = 36,
-            [22] = 59,
+            [20] = 48,
+            [21] = 59,
+            [22] = 67,
             [23] = 37,
-            [24] = 71,
-            [25] = 79,
-            [26] = 58,
-            [27] = 57,
-            [28] = 56,
+            [24] = 72,
+            [25] = 71,
+            [26] = 79,
+            [27] = 58,
+            [28] = 57,
             [29] = 55,
-            [3] = 65,
-            [30] = 88,
-            [31] = 38,
-            [32] = 73,
-            [33] = 39,
-            [34] = 89,
-            [35] = 54,
-            [36] = 77,
-            [37] = 72,
+            [3] = 17,
+            [30] = 56,
+            [31] = 88,
+            [32] = 38,
+            [33] = 73,
+            [34] = 39,
+            [35] = 89,
+            [36] = 54,
+            [37] = 77,
             [38] = 42,
-            [39] = 85,
-            [4] = 86,
-            [40] = 75,
-            [41] = 45,
-            [42] = 53,
-            [43] = 22,
+            [39] = 22,
+            [4] = 65,
+            [40] = 85,
+            [41] = 53,
+            [42] = 75,
+            [43] = 45,
             [44] = 52,
-            [45] = 66,
-            [46] = 51,
-            [47] = 74,
-            [48] = 82,
-            [49] = 7,
-            [5] = 64,
-            [50] = 68,
-            [51] = 50,
-            [52] = 49,
-            [53] = 48,
-            [54] = 67,
-            [6] = 63,
-            [7] = 76,
-            [8] = 84,
-            [9] = 90,
+            [45] = 51,
+            [46] = 82,
+            [47] = 7,
+            [48] = 68,
+            [49] = 50,
+            [5] = 86,
+            [50] = 74,
+            [51] = 49,
+            [52] = 84,
+            [53] = 29,
+            [54] = 62,
+            [6] = 64,
+            [7] = 63,
+            [8] = 76,
+            [9] = 78,
         }, -- end of "neutrals"
         ["red"] = 
         {
             [1] = 18,
-            [2] = 24,
-            [3] = 27,
-            [4] = 81,
-            [5] = 0,
-            [6] = 43,
+            [2] = 27,
+            [3] = 81,
+            [4] = 0,
+            [5] = 43,
+            [6] = 47,
             [7] = 19,
-            [8] = 47,
+            [8] = 24,
         }, -- end of "red"
     }, -- end of "coalitions"
-    ["currentKey"] = 170,
+    ["currentKey"] = 1564,
     ["date"] = 
     {
         ["Day"] = 1,
@@ -635,7 +204,7 @@ mission =
             }, -- end of "forward_observer"
             ["instructor"] = 
             {
-                ["blue"] = 0,
+                ["blue"] = 1,
                 ["neutrals"] = 0,
                 ["red"] = 0,
             }, -- end of "instructor"
@@ -649,9 +218,9 @@ mission =
     }, -- end of "groundControl"
     ["map"] = 
     {
-        ["centerX"] = -242641.7668687,
-        ["centerY"] = -87022.24630229,
-        ["zoom"] = 4693.8115855115,
+        ["centerX"] = -242486.50820195,
+        ["centerY"] = -87677.956822676,
+        ["zoom"] = 417.58447595705,
     }, -- end of "map"
     ["maxDictId"] = 7,
     ["pictureFileNameB"] = 

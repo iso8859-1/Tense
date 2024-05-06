@@ -3,8 +3,8 @@
 -- log levels
 LogLevels = { ERROR = 0, WARN = 1, INFO = 2, DEBUG = 3 }
 
-Logger = { loglevel = LogLevels.ERROR, broadcast = false }
-
+--Logger = { loglevel = LogLevels.ERROR, broadcast = false }
+Logger = { loglevel = LogLevels.INFO, broadcast = true }
 
 function Logger:error(msg)
     if self.loglevel >= LogLevels.ERROR then

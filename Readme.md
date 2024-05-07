@@ -60,3 +60,14 @@ For loader.lua to work, it needs file access. To enable this, find `MissionScrip
 ```
 
 The logger filters according to the log-level set in the logger. The default is `LogLevels.ERROR` i.e., only error messages are shown. The default is also logging into `dcs.log` only, but the log messages can also be broadcasted to everyone if required. All settings can be changed in the `F10` radio menu under `Logger`.
+
+### Persistance
+
+The `PersistenceManager` gives access to an object that allows storing of mission state into a JSON file (`Missions\Saves`). The PersistenceManager provides the following APIs:
+
+- `PersistenceManager:register(key, state)`: registers a table for storage in the persitence file under `key`.
+- `PersistenceManager:retrieve(key)`: reads the table back from storage. Returns `nil` if the key wasn't available.
+
+When using the PersistanceManger, please follow this workflow:
+- use a single state table for storing the relevant state. Objects will crash the code.
+- on initialization, load the state using the key. If it is not nil, assign it to your object. If it is nil, default-initialize your state.

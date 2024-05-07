@@ -3,40 +3,43 @@
 -- log levels
 LogLevels = { ERROR = 0, WARN = 1, INFO = 2, DEBUG = 3 }
 
---Logger = { loglevel = LogLevels.ERROR, broadcast = false }
-Logger = { loglevel = LogLevels.INFO, broadcast = true }
+Logger = { state = { loglevel = LogLevels.ERROR, broadcast = false} }
+
+function Logger:loglevel()
+    return self.state.loglevel
+end
 
 function Logger:error(msg)
-    if self.loglevel >= LogLevels.ERROR then
+    if self.loglevel(self) >= LogLevels.ERROR then
         env.error(msg)
-        if (self.broadcast) then
+        if (self.state.broadcast) then
             MESSAGE:New("ERROR: "..msg, 10):ToAll()
         end
     end
 end
 
 function Logger:warn(msg)
-    if self.loglevel >= LogLevels.WARN then
+    if self.loglevel(self) >= LogLevels.WARN then
         env.warning(msg)
-        if (self.broadcast) then
+        if (self.state.broadcast) then
             MESSAGE:New("WARN: "..msg, 10):ToAll()
         end
     end
 end
 
 function Logger:info(msg)
-    if self.loglevel >= LogLevels.INFO then
+    if self.loglevel(self) >= LogLevels.INFO then
         env.info(msg)
-        if (self.broadcast) then
+        if (self.state.broadcast) then
             MESSAGE:New("INFO: "..msg, 10):ToAll()
         end
     end
 end
 
 function Logger:debug(msg)
-    if self.loglevel >= LogLevels.DEBUG then
+    if self.loglevel(self) >= LogLevels.DEBUG then
         env.info(msg)
-        if (self.broadcast) then
+        if (self.state.broadcast) then
             MESSAGE:New("DEBUG: "..msg, 10):ToAll()
         end
     end
@@ -44,12 +47,12 @@ end
 
 function Logger:setLogLevel(level)
     Logger:info("Setting log level to " .. tostring(level))
-    self.loglevel = level
+    self.state.loglevel = level
 end
 
 function Logger:setBroadcast(broadcast)
     Logger:info("Setting broadcast to " .. tostring(broadcast))
-    self.broadcast = broadcast
+    self.state.broadcast = broadcast
 end
 
 local function test()

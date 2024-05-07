@@ -1,7 +1,13 @@
 import os
 import zipfile
 import shutil
+import configparser
 from pathlib import Path
+
+def load_config_file(filepath):
+    config = configparser.ConfigParser()
+    config.read(filepath)
+    return config
 
 def get_directories(path):
     return [entry.name for entry in os.scandir(path) if entry.is_dir()]
@@ -23,20 +29,39 @@ def getMissionName():
         return [f"{git_dir}.miz"]
     else: 
         return [f"{git_dir}_{item}.miz" for item in getSupportedTheaterList()]
-
-def getDCSPath():
-    # get the DCS path
-    return os.path.join(os.path.expanduser("~"), "Saved Games", "DCS")
-
-def getMissionDir():
-    # get the path to the mission folder
-    return os.path.join(getDCSPath(), "Missions")
-
+    
 def getRepoDirectory():
     # get the path to the tense directory
     path = Path(os.path.realpath(__file__))
     parent = path.parent.parent.absolute()
     return parent
+
+def getDCSPath():
+    # get the DCS path
+    config = load_config_file(os.path.join(getRepoDirectory(), "config.ini"))
+    if config.has_option("build", "DCSDirectory"):
+        return config["build"]["DCSDirectory"]
+    
+    standard_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS")
+    open_beta_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS.openbeta")
+    standard_path_exists = os.path.exists(standard_path)
+    open_beta_path_exists = os.path.exists(open_beta_path)
+    if standard_path_exists and open_beta_path_exists:
+        print("Both the standard and open beta DCS directories exist. Please specify the DCS directory in the config.ini file.")
+        return None
+    elif standard_path_exists:
+        return standard_path
+    elif open_beta_path_exists:
+        return open_beta_path
+    else:
+        print("No DCS directories found. Please specify the DCS directory in the config.ini file.")
+        return None
+
+def getMissionDir():
+    # get the path to the mission folder
+    return os.path.join(getDCSPath(), "Missions")
+
+
 
 def unzip_file(zip_filepath, dest_dir):
     with zipfile.ZipFile(zip_filepath, 'r') as zip_ref:

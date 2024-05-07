@@ -17,6 +17,18 @@ To use the build tools, you need
 2. open DCS Mission editor and start editing the mission.
 3. at any time during your editing, you can save your current progress and transfer it to git by calling `update.py`. This will unzip and copy the files of the mission into the git repo. It does some normalizing to reduce the number of unintended changes in that process. You can then commit it to git.
 
+### config.ini
+
+You can configure the behavior if the defaults are not sufficient for you using `config.ini` in the base directory of the repo.
+
+```
+[build]
+DCSDirectory = c:\test
+```
+
+Options:
+- `DCSDirectory` (sektion `build`): alternative path for your `Saved Games\DCS` folder.
+
 ## Scripting
 
 ### Dynamic loading of lua files

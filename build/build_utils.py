@@ -36,7 +36,7 @@ def getRepoDirectory():
     parent = path.parent.parent.absolute()
     return parent
 
-def getDCSPath():
+def getDCSSavedGamesPath():
     # get the DCS path
     config = load_config_file(os.path.join(getRepoDirectory(), "config.ini"))
     if config.has_option("build", "DCSDirectory") and config.get("build", "DCSDirectory"):
@@ -59,7 +59,7 @@ def getDCSPath():
 
 def getMissionDir():
     # get the path to the mission folder
-    return getDCSPath()
+    return getDCSSavedGamesPath()
 
 
 

@@ -42,8 +42,8 @@ def getDCSPath():
     if config.has_option("build", "DCSDirectory"):
         return config["build"]["DCSDirectory"]
     
-    standard_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS")
-    open_beta_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS.openbeta")
+    standard_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS", "Missions")
+    open_beta_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS.openbeta", "Missions")
     standard_path_exists = os.path.exists(standard_path)
     open_beta_path_exists = os.path.exists(open_beta_path)
     if standard_path_exists and open_beta_path_exists:
@@ -59,7 +59,7 @@ def getDCSPath():
 
 def getMissionDir():
     # get the path to the mission folder
-    return os.path.join(getDCSPath(), "Missions")
+    return getDCSPath()
 
 
 

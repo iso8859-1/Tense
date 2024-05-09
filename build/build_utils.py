@@ -39,7 +39,7 @@ def getRepoDirectory():
 def getDCSPath():
     # get the DCS path
     config = load_config_file(os.path.join(getRepoDirectory(), "config.ini"))
-    if config.has_option("build", "DCSDirectory"):
+    if config.has_option("build", "DCSDirectory") and config.get("build", "DCSDirectory"):
         return config["build"]["DCSDirectory"]
     
     standard_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS", "Missions")

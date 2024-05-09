@@ -14,20 +14,27 @@ To use the build tools, you need
 
 0. check-out the git repo
 1. build the mission by calling `build.py`. It will place the mission in your `Saved Games\DCS\Mission` folder.
-2. open DCS Mission editor and start editing the mission.
-3. at any time during your editing, you can save your current progress and transfer it to git by calling `update.py`. This will unzip and copy the files of the mission into the git repo. It does some normalizing to reduce the number of unintended changes in that process. You can then commit it to git.
+2. desanitize your MissionScripting.lua by executing `desanitize.py`. This is needed initially and after every DCS Update.
+3. open DCS Mission editor and start editing the mission.
+4. at any time during your editing, you can save your current progress and transfer it to git by calling `update.py`. This will unzip and copy the files of the mission into the git repo. It does some normalizing to reduce the number of unintended changes in that process. You can then commit it to git.
 
 ### config.ini
 
-You can configure the behavior if the defaults are not sufficient for you using `config.ini` in the base directory of the repo.
+It is mandatory to set your DCS install directory path!
+The DCS Saved Games directory is detected automatically. If you want to use a custom directory you can set it here.
 
 ```
-[build]
-DCSDirectory = c:\test
+[base]
+;Mandatory
+DCSInstallDirectory = c:\DCS
+
+;Optional
+DCSSavedGamesDirectory = c:\test
 ```
 
 Options:
-- `DCSDirectory` (sektion `build`): alternative path for your `Saved Games\DCS` folder.
+- `DCSInstallDirector` (section `base`): path to your DCS install folder. (Mandatory)
+- `DCSSavedGamesDirectory` (section `base`): alternative path for your `Saved Games\DCS` folder. (Optional)
 
 ## Scripting
 

@@ -2,3 +2,4 @@
 temp/
 scripts/Moose.lua
 options
+config.ini

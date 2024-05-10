@@ -1,7 +1,7 @@
 import argparse
 import os
 import lrparsing
-from build_utils import getDCSPath, getRepoDirectory, replace_file_content, load_file_into_string
+from build_utils import getDCSSavedGamesPath, getRepoDirectory, replace_file_content, load_file_into_string
 from lrparsing import Keyword, List, Prio, Ref, THIS, Token, Tokens
 
 class LuaTableParser(lrparsing.Grammar):

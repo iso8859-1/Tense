@@ -32,7 +32,7 @@ end
 if lfs == nil then
     env.warning("Mission running in sanatized environment.")
     MESSAGE:New("Mission running in sanatized environment. Not all features available", 10):ToAll()
-    MESSAGE:New("To de-sanatize it, edit MissionScriptiong.lua", 10):ToAll()
+    MESSAGE:New("To de-sanatize it, run desanitize.py script", 10):ToAll()
     return
 end
 load_init_scripts()

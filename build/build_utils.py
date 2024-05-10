@@ -36,32 +36,33 @@ def getRepoDirectory():
     parent = path.parent.parent.absolute()
     return parent
 
-def getDCSPath():
+def getDCSSavedGamesPath():
     # get the DCS path
     config = load_config_file(os.path.join(getRepoDirectory(), "config.ini"))
-    if config.has_option("build", "DCSDirectory") and config.get("build", "DCSDirectory"):
-        return config["build"]["DCSDirectory"]
+    if config.has_option("base", "DCSSavedGamesDirectory") and config.get("base", "DCSSavedGamesDirectory"):
+        return config["base"]["DCSSavedGamesDirectory"]
     
     standard_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS", "Missions")
     open_beta_path = os.path.join(os.path.expanduser("~"), "Saved Games", "DCS.openbeta", "Missions")
     standard_path_exists = os.path.exists(standard_path)
     open_beta_path_exists = os.path.exists(open_beta_path)
     if standard_path_exists and open_beta_path_exists:
-        print("Both the standard and open beta DCS directories exist. Please specify the DCS directory in the config.ini file.")
+        print("Both the standard and open beta DCS Saved Games directories exist. Please specify the DCS Saved Games directory in the config.ini file.")
         return None
     elif standard_path_exists:
         return standard_path
     elif open_beta_path_exists:
         return open_beta_path
     else:
-        print("No DCS directories found. Please specify the DCS directory in the config.ini file.")
+        print("No DCS Saved Games directories found. Please specify the DCS Saved Games directory in the config.ini file.")
         return None
-
-def getMissionDir():
-    # get the path to the mission folder
-    return getDCSPath()
-
-
+    
+def getDCSInstallationPath():
+    config = load_config_file(os.path.join(getRepoDirectory(), "config.ini"))
+    if config.has_option("base", "DCSInstallDirectory") and config.get("base", "DCSInstallDirectory"):
+        return config["base"]["DCSInstallDirectory"]
+    else:
+        print("DCS installation directory not found in config.ini")
 
 def unzip_file(zip_filepath, dest_dir):
     with zipfile.ZipFile(zip_filepath, 'r') as zip_ref:

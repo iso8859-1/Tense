@@ -64,12 +64,6 @@ def getDCSInstallationPath():
     else:
         print("DCS installation directory not found in config.ini")
 
-def getMissionDir():
-    # get the path to the mission folder
-    return getDCSSavedGamesPath()
-
-
-
 def unzip_file(zip_filepath, dest_dir):
     with zipfile.ZipFile(zip_filepath, 'r') as zip_ref:
         zip_ref.extractall(dest_dir)

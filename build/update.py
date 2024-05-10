@@ -1,13 +1,13 @@
 # Updates the mission files from the mission editor
 import os
-from build_utils import getMissionDir, getRepoDirectory, unzip_file, getMissionName, getSupportedTheaterList
+from build_utils import getDCSSavedGamesPath, getRepoDirectory, unzip_file, getMissionName, getSupportedTheaterList
 from normalize import normalize
 
 def main():
     # main
     missions = list(zip(getMissionName(), getSupportedTheaterList()))
     for mission, theater in missions:
-        missionPath = os.path.join(getMissionDir(), mission)
+        missionPath = os.path.join(getDCSSavedGamesPath(), mission)
         destination = os.path.join(getRepoDirectory(), "mission", theater)
         unzip_file(missionPath, destination)      
         # normalize the lua files

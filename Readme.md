@@ -33,7 +33,7 @@ DCSSavedGamesDirectory = c:\test
 ```
 
 Options:
-- `DCSInstallDirector` (section `base`): path to your DCS install folder. (Mandatory)
+- `DCSInstallDirectory` (section `base`): path to your DCS install folder. (Mandatory)
 - `DCSSavedGamesDirectory` (section `base`): alternative path for your `Saved Games\DCS` folder. (Optional)
 
 ## Scripting

@@ -14,7 +14,7 @@ To use the build tools, you need
 
 0. check-out the git repo
 1. build the mission by calling `build.py`. It will place the mission in your `Saved Games\DCS\Mission` folder.
-2. desanitize your MissionScripting.lua by executing `desanitize.py`. This is needed initially and after every DCS Update.
+2. desanitize your MissionScripting.lua by executing `desanitize.py`. **This is needed initially and after every DCS Update.**
 3. open DCS Mission editor and start editing the mission.
 4. at any time during your editing, you can save your current progress and transfer it to git by calling `update.py`. This will unzip and copy the files of the mission into the git repo. It does some normalizing to reduce the number of unintended changes in that process. You can then commit it to git.
 
@@ -53,7 +53,7 @@ To be able to edit a `lua` script file while testing the scripts in DCS without 
 
 loader.lua will run once after `Moose` has been initialized. It's purpose is to run all lua scripts that are required to initialize the mission. For that, it will grab all `.lua` files in the init subfolder and load them in alphabetical order. There is no need to add a trigger / assert for files in that folder.
 
-For loader.lua to work, it needs file access. To enable this, find `MissionScripting.lua` and comment out / remove `sanitizeModule('lfs')` (e.g. by replacing it with `-- sanitizeModule('lfs')`).
+For loader.lua to work, it needs file access. To enable this, execute `desanitize.py`, it will automatically desanitize your `MissionScripting.lua`.
 
 ### Logging
 
@@ -68,7 +68,7 @@ For loader.lua to work, it needs file access. To enable this, find `MissionScrip
 
 The logger filters according to the log-level set in the logger. The default is `LogLevels.ERROR` i.e., only error messages are shown. The default is also logging into `dcs.log` only, but the log messages can also be broadcasted to everyone if required. All settings can be changed in the `F10` radio menu under `Logger`.
 
-### Persistance
+### Persistence
 
 The `PersistenceManager` gives access to an object that allows storing of mission state into a JSON file (`Missions\Saves`). The PersistenceManager provides the following APIs:
 

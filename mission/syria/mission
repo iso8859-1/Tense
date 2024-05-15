@@ -11,6 +11,274 @@ mission =
             }, -- end of "bullseye"
             ["country"] = 
             {
+                [1] = 
+                {
+                    ["id"] = 16,
+                    ["name"] = "Georgia",
+                    ["plane"] = 
+                    {
+                        ["group"] = 
+                        {
+                            [1] = 
+                            {
+                                ["communication"] = true,
+                                ["frequency"] = 124,
+                                ["groupId"] = 1,
+                                ["hidden"] = false,
+                                ["modulation"] = 0,
+                                ["name"] = "Aerial-1",
+                                ["radioSet"] = false,
+                                ["route"] = 
+                                {
+                                    ["points"] = 
+                                    {
+                                        [1] = 
+                                        {
+                                            ["ETA"] = 0,
+                                            ["ETA_locked"] = true,
+                                            ["action"] = "From Parking Area",
+                                            ["airdromeId"] = 13,
+                                            ["alt"] = 6,
+                                            ["alt_type"] = "BARO",
+                                            ["formation_template"] = "",
+                                            ["speed"] = 138.88888888889,
+                                            ["speed_locked"] = true,
+                                            ["task"] = 
+                                            {
+                                                ["id"] = "ComboTask",
+                                                ["params"] = 
+                                                {
+                                                    ["tasks"] = 
+                                                    {
+                                                        [1] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "EngageTargets",
+                                                            ["key"] = "CAS",
+                                                            ["number"] = 1,
+                                                            ["params"] = 
+                                                            {
+                                                                ["priority"] = 0,
+                                                                ["targetTypes"] = 
+                                                                {
+                                                                    [1] = "Helicopters",
+                                                                    [2] = "Ground Units",
+                                                                    [3] = "Light armed ships",
+                                                                }, -- end of "targetTypes"
+                                                            }, -- end of "params"
+                                                        }, -- end of 1
+                                                        [2] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 2,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["name"] = 1,
+                                                                        ["value"] = 2,
+                                                                    }, -- end of "params"
+                                                                }, -- end of "action"
+                                                            }, -- end of "params"
+                                                        }, -- end of 2
+                                                        [3] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 3,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["name"] = 3,
+                                                                        ["value"] = 1,
+                                                                    }, -- end of "params"
+                                                                }, -- end of "action"
+                                                            }, -- end of "params"
+                                                        }, -- end of 3
+                                                        [4] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 4,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["formationIndex"] = 2,
+                                                                        ["name"] = 5,
+                                                                        ["value"] = 131074,
+                                                                        ["variantIndex"] = 2,
+                                                                    }, -- end of "params"
+                                                                }, -- end of "action"
+                                                            }, -- end of "params"
+                                                        }, -- end of 4
+                                                        [5] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 5,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["name"] = 15,
+                                                                        ["value"] = true,
+                                                                    }, -- end of "params"
+                                                                }, -- end of "action"
+                                                            }, -- end of "params"
+                                                        }, -- end of 5
+                                                        [6] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 6,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["name"] = 21,
+                                                                        ["noTargetTypes"] = 
+                                                                        {
+                                                                            [1] = "Fighters",
+                                                                            [10] = "APC",
+                                                                            [11] = "Artillery",
+                                                                            [12] = "Unarmed vehicles",
+                                                                            [13] = "AAA",
+                                                                            [14] = "SR SAM",
+                                                                            [15] = "MR SAM",
+                                                                            [16] = "LR SAM",
+                                                                            [17] = "Aircraft Carriers",
+                                                                            [18] = "Cruisers",
+                                                                            [19] = "Destroyers",
+                                                                            [2] = "Multirole fighters",
+                                                                            [20] = "Frigates",
+                                                                            [21] = "Corvettes",
+                                                                            [22] = "Light armed ships",
+                                                                            [23] = "Unarmed ships",
+                                                                            [24] = "Submarines",
+                                                                            [25] = "Cruise missiles",
+                                                                            [26] = "Antiship Missiles",
+                                                                            [27] = "AA Missiles",
+                                                                            [28] = "AG Missiles",
+                                                                            [29] = "SA Missiles",
+                                                                            [3] = "Bombers",
+                                                                            [4] = "Helicopters",
+                                                                            [5] = "UAVs",
+                                                                            [6] = "Infantry",
+                                                                            [7] = "Fortifications",
+                                                                            [8] = "Tanks",
+                                                                            [9] = "IFV",
+                                                                        }, -- end of "noTargetTypes"
+                                                                        ["targetTypes"] = 
+                                                                        {
+                                                                        }, -- end of "targetTypes"
+                                                                        ["value"] = "none;",
+                                                                    }, -- end of "params"
+                                                                }, -- end of "action"
+                                                            }, -- end of "params"
+                                                        }, -- end of 6
+                                                        [7] = 
+                                                        {
+                                                            ["auto"] = true,
+                                                            ["enabled"] = true,
+                                                            ["id"] = "WrappedAction",
+                                                            ["number"] = 7,
+                                                            ["params"] = 
+                                                            {
+                                                                ["action"] = 
+                                                                {
+                                                                    ["id"] = "Option",
+                                                                    ["params"] = 
+                                                                    {
+                                                                        ["name"] = 19,
+                                                                        ["value"] = true,
+                                                                    }, -- end of "params"
+                                                                }, -- end of "action"
+                                                            }, -- end of "params"
+                                                        }, -- end of 7
+                                                    }, -- end of "tasks"
+                                                }, -- end of "params"
+                                            }, -- end of "task"
+                                            ["type"] = "TakeOffParking",
+                                            ["x"] = -242420.984375,
+                                            ["y"] = -87576.8515625,
+                                        }, -- end of 1
+                                    }, -- end of "points"
+                                }, -- end of "route"
+                                ["start_time"] = 0,
+                                ["task"] = "CAS",
+                                ["tasks"] = 
+                                {
+                                }, -- end of "tasks"
+                                ["uncontrollable"] = false,
+                                ["uncontrolled"] = false,
+                                ["units"] = 
+                                {
+                                    [1] = 
+                                    {
+                                        ["alt"] = 6,
+                                        ["alt_type"] = "BARO",
+                                        ["callsign"] = 
+                                        {
+                                            ["name"] = "Enfield11",
+                                            [1] = 1,
+                                            [2] = 1,
+                                            [3] = 1,
+                                        }, -- end of "callsign"
+                                        ["heading"] = 0,
+                                        ["livery_id"] = "af standard",
+                                        ["name"] = "Aerial-1-1",
+                                        ["onboard_num"] = "010",
+                                        ["parking"] = "11",
+                                        ["parking_id"] = "Z2",
+                                        ["payload"] = 
+                                        {
+                                            ["chaff"] = 128,
+                                            ["flare"] = 128,
+                                            ["fuel"] = "3790",
+                                            ["gun"] = 100,
+                                            ["pylons"] = 
+                                            {
+                                            }, -- end of "pylons"
+                                        }, -- end of "payload"
+                                        ["psi"] = 0,
+                                        ["skill"] = "Client",
+                                        ["speed"] = 138.88888888889,
+                                        ["type"] = "Su-25T",
+                                        ["unitId"] = 1,
+                                        ["x"] = -242420.984375,
+                                        ["y"] = -87576.8515625,
+                                    }, -- end of 1
+                                }, -- end of "units"
+                                ["x"] = -242420.984375,
+                                ["y"] = -87576.8515625,
+                            }, -- end of 1
+                        }, -- end of "group"
+                    }, -- end of "plane"
+                }, -- end of 1
             }, -- end of "country"
             ["name"] = "blue",
             ["nav_points"] = 
@@ -150,7 +418,7 @@ mission =
             [8] = 24,
         }, -- end of "red"
     }, -- end of "coalitions"
-    ["currentKey"] = 1564,
+    ["currentKey"] = 1744,
     ["date"] = 
     {
         ["Day"] = 1,
@@ -218,9 +486,9 @@ mission =
     }, -- end of "groundControl"
     ["map"] = 
     {
-        ["centerX"] = -242486.50820195,
-        ["centerY"] = -87677.956822676,
-        ["zoom"] = 417.58447595705,
+        ["centerX"] = -256181.98870672,
+        ["centerY"] = -72755.90805896,
+        ["zoom"] = 106309.21026752,
     }, -- end of "map"
     ["maxDictId"] = 7,
     ["pictureFileNameB"] = 
@@ -317,6 +585,84 @@ mission =
     {
         ["zones"] = 
         {
+            [1] = 
+            {
+                ["color"] = 
+                {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.15,
+                }, -- end of "color"
+                ["heading"] = 0,
+                ["hidden"] = false,
+                ["name"] = "Airport Haifa",
+                ["properties"] = 
+                {
+                    [1] = 
+                    {
+                        ["key"] = "ZONE_TYPE",
+                        ["value"] = "Airport",
+                    }, -- end of 1
+                }, -- end of "properties"
+                ["radius"] = 914.4,
+                ["type"] = 0,
+                ["x"] = -242729.14176042,
+                ["y"] = -87594.707524377,
+                ["zoneId"] = 99,
+            }, -- end of 1
+            [2] = 
+            {
+                ["color"] = 
+                {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.15,
+                }, -- end of "color"
+                ["heading"] = 0,
+                ["hidden"] = false,
+                ["name"] = "Factory",
+                ["properties"] = 
+                {
+                    [1] = 
+                    {
+                        ["key"] = "ZONE_TYPE",
+                        ["value"] = "Factory",
+                    }, -- end of 1
+                }, -- end of "properties"
+                ["radius"] = 609.6,
+                ["type"] = 0,
+                ["x"] = -254419.86072162,
+                ["y"] = -82042.981617303,
+                ["zoneId"] = 100,
+            }, -- end of 2
+            [3] = 
+            {
+                ["color"] = 
+                {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 1,
+                    [4] = 0.15,
+                }, -- end of "color"
+                ["heading"] = 0,
+                ["hidden"] = false,
+                ["name"] = "Airport Ramat David",
+                ["properties"] = 
+                {
+                    [1] = 
+                    {
+                        ["key"] = "ZONE_TYPE",
+                        ["value"] = "Airport",
+                    }, -- end of 1
+                }, -- end of "properties"
+                ["radius"] = 2286,
+                ["type"] = 0,
+                ["x"] = -259334.65278009,
+                ["y"] = -75468.373459143,
+                ["zoneId"] = 199,
+            }, -- end of 3
         }, -- end of "zones"
     }, -- end of "triggers"
     ["trigrules"] = 

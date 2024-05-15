@@ -3,7 +3,7 @@
 # Dev Mode: loads the scripts via assert to allow modification without rebuilding the mission file
 import os
 import shutil
-from build_utils import getMissionDir, zip_mission, getRepoDirectory, load_file_into_string, replace_file_content, getMissionName, getSupportedTheaterList
+from build_utils import getDCSSavedGamesPath, zip_mission, getRepoDirectory, load_file_into_string, replace_file_content, getMissionName, getSupportedTheaterList
 
 def replace_git_repo_scripts_location(filename):
     content = load_file_into_string(filename)
@@ -30,7 +30,7 @@ def main():
     temp = os.path.join(getRepoDirectory(), "temp")
     missions = list(zip(getMissionName(), getSupportedTheaterList()))
     for mission, theater in missions:
-        destination = os.path.join(getMissionDir(), mission)
+        destination = os.path.join(getDCSSavedGamesPath(), mission)
         source_dir = os.path.join(getRepoDirectory(), "mission", theater)
         copy_to_temp(source_dir)
         # normalize the lua files

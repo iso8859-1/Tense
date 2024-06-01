@@ -16,15 +16,26 @@ local function load_init_scripts()
     local path = GetScriptPath() .. "init"
     env.info("Loading init scripts fom: " .. path)
     MESSAGE:New("Loading init scripts from " .. path, 10):ToAll()
+
+    -- Create a table to hold the filenames
+    local files = {}
     for file in lfs.dir(path) do
         if file ~= "." and file ~= ".." then
             local f = path..'\\'..file
             if lfs.attributes(f, "mode") == "file" and f:match("%.lua$") then
-                env.info("Loading script: " .. f)
-                MESSAGE:New("Loading script: " .. f, 10):ToAll()
-                assert(loadfile(f))()
+                table.insert(files, f)
             end
         end
+    end
+
+    -- Sort the table
+    table.sort(files)
+
+    -- Iterate over the sorted table
+    for _, f in ipairs(files) do
+        env.info("Loading script: " .. f)
+        MESSAGE:New("Loading script: " .. f, 10):ToAll()
+        assert(loadfile(f))()
     end
 end
 
